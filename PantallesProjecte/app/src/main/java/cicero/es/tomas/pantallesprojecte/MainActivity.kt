@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import cicero.es.tomas.pantallesprojecte.ui.Screens.MainScreen
 import cicero.es.tomas.pantallesprojecte.ui.theme.PantallesProjecteTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +21,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             PantallesProjecteTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    TODO("$innerPadding")
+//                    TODO("$innerPadding")
+                    MainScreen(innerPadding)
                 }
             }
         }
