@@ -1,5 +1,6 @@
 package com.tomasbusfri.files.casinopark.Model.DAO.Interfaces
 
+import com.tomasbusfri.files.casinopark.Model.API.APIClasses.APICard
 import com.tomasbusfri.files.casinopark.Model.DataClasses.Card
 import com.tomasbusfri.files.casinopark.Model.DataClasses.Deck
 
@@ -7,6 +8,8 @@ interface DAODeck {
     fun getDeckByID(deckId:Int): Deck?
 
     fun getCardsOfDeck(deckId: Int): List<Card>
+
+    fun fillDeck(APICard: APICard): Boolean
 
     fun createDeck(deck: Deck): Boolean
 
