@@ -12,6 +12,8 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            val sqlite_version = "2.6.2"
+
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
             implementation(libs.compose.material3)
@@ -54,6 +56,13 @@ kotlin {
 
             //Constraint layout per a Compose
             implementation ("androidx.constraintlayout:constraintlayout-compose:1.1.1")
+
+            // Java language implementation
+            implementation("androidx.sqlite:sqlite:${sqlite_version}")
+            // Kotlin
+            implementation("androidx.sqlite:sqlite-ktx:${sqlite_version}")
+            // Implementation of the AndroidX SQLite interfaces via the Android framework APIs.
+            implementation("androidx.sqlite:sqlite-framework:${sqlite_version}")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
