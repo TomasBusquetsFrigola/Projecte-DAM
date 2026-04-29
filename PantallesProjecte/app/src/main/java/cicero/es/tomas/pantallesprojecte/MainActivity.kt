@@ -1,0 +1,30 @@
+package cicero.es.tomas.pantallesprojecte
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import cicero.es.tomas.pantallesprojecte.ui.Screens.MainScreen
+import cicero.es.tomas.pantallesprojecte.ui.theme.PantallesProjecteTheme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            PantallesProjecteTheme {
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+//                    TODO("$innerPadding")
+                    MainScreen(innerPadding)
+                }
+            }
+        }
+    }
+}
