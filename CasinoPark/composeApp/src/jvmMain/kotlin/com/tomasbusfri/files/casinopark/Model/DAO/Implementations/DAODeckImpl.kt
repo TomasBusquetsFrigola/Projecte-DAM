@@ -1,3 +1,4 @@
+package com.tomasbusfri.files.casinopark.Model.DAO.Implementations/*
 package com.tomasbusfri.files.casinopark.Model.DAO.Implementations
 
 import com.tomasbusfri.files.casinopark.Model.DAO.Interfaces.DAODeck
@@ -159,4 +160,4 @@ class DAODeckImpl (
     override fun getAllInMemory(): List<Deck> {
         return decksInMemory.toList()
     }
-}
+}*/
