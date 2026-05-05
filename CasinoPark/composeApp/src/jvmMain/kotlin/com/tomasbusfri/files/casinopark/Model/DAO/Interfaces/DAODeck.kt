@@ -4,13 +4,6 @@ import com.tomasbusfri.files.casinopark.Model.DataClasses.Card
 import com.tomasbusfri.files.casinopark.Model.DataClasses.Deck
 
 interface DAODeck {
-    /**
-     * Returns the deck with matching id
-     *
-     * @param deckId The id of the deck desired
-     *
-     * @return The deck desired if found, otherwise null
-     */
     fun getDeckByID(deckId: String): Deck?
 
     fun getCardsOfDeck(deckId: String): List<Card>
