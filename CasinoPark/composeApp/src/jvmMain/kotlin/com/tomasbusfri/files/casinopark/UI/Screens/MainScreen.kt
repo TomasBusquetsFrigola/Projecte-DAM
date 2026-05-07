@@ -63,7 +63,6 @@ fun MainScreen(
                     .border(
                       width = 3.dp,
                       color = Colors.METALLIC_SILVER,
-
                     )
                     .fillMaxWidth()
                     .size(125.dp)
