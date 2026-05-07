@@ -1,0 +1,83 @@
+package com.tomasbusfri.files.casinopark.UI.Screens
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.tomasbusfri.files.casinopark.UI.Colors.Colors
+
+@Composable
+fun MainScreen(
+
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = Colors.CASINO_TABLE_GREEN)
+            .padding(16.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .border(3.dp, Colors.METALLIC_GOLD)
+                .fillMaxWidth()
+                .padding(8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ){
+            Text(
+                text = "WELCOME",
+                color  = Colors.METALLIC_GOLD,
+                style = MaterialTheme.typography.displayLarge,
+                fontWeight = FontWeight.Bold
+            )
+        }
+        Spacer(modifier = Modifier.size(16.dp))
+        Row(
+            modifier = Modifier
+                .border(
+                    width = 3.dp,
+                    Colors.METALLIC_GOLD
+                )
+                .fillMaxWidth()
+                .size(800.dp)
+                .padding(16.dp),
+        ) {
+            Row (
+                modifier = Modifier
+                    .border(
+                      width = 3.dp,
+                      color = Colors.METALLIC_SILVER,
+                    )
+                    .fillMaxWidth()
+                    .size(125.dp)
+                    .padding(8.dp),
+            ) {
+                Button(
+                    onClick = {
+
+                    },
+                    colors = ButtonDefaults.buttonColors(Colors.METALLIC_SILVER)
+                ) {
+                    Text(
+                        "SOLITAIRE"
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Preview
+@Composable
+fun PreviewMainScreen() {
+    MainScreen()
+}
