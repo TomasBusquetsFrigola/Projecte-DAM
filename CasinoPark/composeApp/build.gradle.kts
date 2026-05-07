@@ -14,14 +14,7 @@ kotlin {
         commonMain.dependencies {
             val sqlite_version = "2.6.2"
 
-            implementation(libs.compose.runtime)
-            implementation(libs.compose.foundation)
-            implementation(libs.compose.material3)
-            implementation(libs.compose.ui)
-            implementation(libs.compose.components.resources)
-            implementation(libs.compose.uiToolingPreview)
-            implementation(libs.androidx.lifecycle.viewmodelCompose)
-            implementation(libs.androidx.lifecycle.runtimeCompose)
+
 
             //Serialització ((CAl activar el plugin a l'altre gradle)
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0")
@@ -35,6 +28,9 @@ kotlin {
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
+            implementation(libs.androidx.foundation.layout.desktop)
+            implementation(libs.androidx.material3.desktop)
+            implementation(libs.androidx.ui.desktop)
         }
     }
 }

@@ -1,8 +1,6 @@
 package com.tomasbusfri.files.casinopark.Model.DataClasses
 
-import com.tomasbusfri.files.casinopark.Model.API.APIClasses.APICard
 import com.tomasbusfri.files.casinopark.Model.API.APIClasses.APIDeck
-import com.tomasbusfri.files.casinopark.Model.API.APIClasses.IndividualAPICard
 
 data class Deck(
     val deckId: String,
